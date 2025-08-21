@@ -11,6 +11,9 @@ export function checkUnit(){
 
 export function pickLocation(){
   const searchBar = document.querySelector('.navBar form input');
+  if(searchBar.value === ''){
+    return;
+  }
   
   const location = searchBar.value.trim().toLowerCase().replace(/\s+/g, '');
 
