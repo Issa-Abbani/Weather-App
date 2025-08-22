@@ -1,0 +1,1 @@
+import"../styles.css";import{eventListeners}from"./addEvents.js";document.addEventListener("DOMContentLoaded",()=>{document.querySelector(".navBar form").addEventListener("submit",e=>{e.preventDefault()}),eventListeners.searchEvent(),eventListeners.unitSwitchEvent()});
