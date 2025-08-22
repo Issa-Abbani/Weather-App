@@ -8,7 +8,7 @@ export const eventListeners = (function (){
   const searchEvent = ()=>{
     getWeather(location,unit);
     const searchBtn = document.querySelector('.search-btn');
-    let lastLocation = location
+    let lastLocation = location;
     searchBtn.addEventListener('click', ()=>{
      location = pickLocation() || location;
      if(lastLocation === location){

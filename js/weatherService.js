@@ -11,17 +11,24 @@ export async function getWeather(location, unit) {
     
     const jsonData = await rawData.json();
 
+    if (!jsonData.address || !jsonData.currentConditions || !jsonData.days) {
+      alert('Location not available!');
+      return null;
+    }
+
     const reqData = {
       address: jsonData.address,
       currentConditions: jsonData.currentConditions,
-      days: jsonData.days
-    }
-    console.log(reqData);
+      days: jsonData.days,
+      resolvedAddress: jsonData.resolvedAddress
+    }   
+    console.log(jsonData); 
+    // console.log(reqData);
 
     return reqData;
   }
   catch (e){
-    console.log(`Error ${e}`);
+    alert('Location not available!');
     return null;
   }
 }
