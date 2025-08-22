@@ -10,7 +10,6 @@ export async function generateUI(location, unit) {
 
   try {
     const data = await getWeather(location, unit);
-    console.log('done');
     renderUI(data, unit);
   } 
   catch (err) {
@@ -34,6 +33,14 @@ function renderUI(data, unit){
     tempType = "°F";  //Fahrenheit, mph, inches
     speedUnit = "mph"
     snowDepth = "inches";
+  }
+
+  //slider ui
+  const slider = document.querySelector('#unitToggle');
+  if(unit == 'c'){
+    slider.checked = false;
+  }else{
+    slider.checked = true;
   }
 
   renderNavBar(data, tempType);
