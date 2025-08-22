@@ -2,22 +2,28 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "production",
+  mode: "development", // use development for webpack serve
   entry: "./src/js/script.js",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: './',
     clean: true,
   },
   devtool: 'source-map',
   devServer: {
     watchFiles: ["./src/template.html"],
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    compress: true,
+    port: 8080,
+    hot: true,
+    open: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
-      inject: 'body'
+      inject: true
     }),
   ],
   module: {
