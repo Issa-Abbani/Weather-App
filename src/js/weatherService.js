@@ -7,7 +7,7 @@ export async function getWeather(location, unit) {
   }
 
   try{
-    const rawData = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=${unitType}&include=days%2Ccurrent&key=6ZPQS349JE8ZLYL5NYQSSM4A7&contentType=json`);
+    const rawData = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=${unitType}&include=days%2Ccurrent&key=6ZPQS349JE8ZLYL5NYQSSM4A7&contentType=json&lang=id`);
     
     const jsonData = await rawData.json();
 
@@ -22,7 +22,7 @@ export async function getWeather(location, unit) {
       days: jsonData.days,
       resolvedAddress: jsonData.resolvedAddress
     }   
-    console.log(jsonData); 
+    console.log(reqData); 
     // console.log(reqData);
 
     return reqData;
