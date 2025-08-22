@@ -1,4 +1,6 @@
 # Weather App
+![Weather App Logo](./src/assets/readme%20screenshots/weather_logo.png)
+
 
 A dynamic weather application that displays real-time weather information for user-selected locations. Built with **JavaScript**, **HTML**, **CSS**, and **Webpack**, this project leverages APIs and modern front-end practices to create a responsive and interactive UI. The Visual Crossing API was an easily accessible and resourceful API.
 
