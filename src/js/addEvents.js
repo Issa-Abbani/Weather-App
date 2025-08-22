@@ -1,5 +1,4 @@
 import { checkUnit , pickLocation} from "./userInput.js";
-import { getWeather } from "./weatherService.js";
 import { generateUI } from "./dynamic_UI.js";
 
 export const eventListeners = (function (){

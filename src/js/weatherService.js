@@ -22,8 +22,6 @@ export async function getWeather(location, unit) {
       days: jsonData.days,
       resolvedAddress: jsonData.resolvedAddress
     }   
-    console.log(reqData); 
-    // console.log(reqData);
 
     return reqData;
   }
