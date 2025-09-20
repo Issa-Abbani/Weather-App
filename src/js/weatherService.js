@@ -7,7 +7,7 @@ export async function getWeather(location, unit) {
   }
 
   try{
-    const rawData = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=${unitType}&include=days%2Ccurrent&key=6ZPQS349JE8ZLYL5NYQSSM4A7&contentType=json&lang=id`);
+    const rawData = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=${unitType}&include=days%2Ccurrent&key=8CG2C6Y83FJ8YHD3RHZ79XVL8&contentType=json&lang=id`);
 
     if(!rawData.ok){
       alert("API rate limit reached. Please wait a bit before retrying.");
