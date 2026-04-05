@@ -13,7 +13,7 @@ export async function generateUI(location, unit) {
     renderUI(data, unit);
   } 
   catch (err) {
-    console.error('Failed to fetch weather:', err);
+    alert('Failed to fetch weather:', err);
   } 
   finally {
     loader.style.display = 'none';
