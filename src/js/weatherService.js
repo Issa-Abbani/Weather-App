@@ -1,6 +1,6 @@
 export async function getWeather(location, unit) {
   const res = await fetch(
-    `http://localhost:3000/api/weather?location=${encodeURIComponent(location)}&unit=${unit}`
+    `https://weather-app-proxy-two.vercel.app/api/weather?location=${encodeURIComponent(location)}&unit=${unit}`
   );
 
   if (!res.ok) {
