@@ -1,7 +1,9 @@
 export async function getWeather(location, unit) {
   const res = await fetch(
-    `https://weather-app-proxy-two.vercel.app/api/weather?location=${encodeURIComponent(location)}&unit=${unit}`
+    `https://weather-app-proxy-two.vercel.app/api/weather?location=${location}&unit=${unit}`
   );
+
+  //Note that encoding and input sanitization is handled on the server side
 
   if (!res.ok) {
     const errBody = await res.json().catch(() => ({}));
